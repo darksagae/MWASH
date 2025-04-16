@@ -1,0 +1,98 @@
+.balance-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance {
+    text-align: left;
+}
+
+.actions {
+    text-align: right;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.wallet-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.network-icon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.balance-section {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.balance p {
+    margin: 5px 0;
+}
+
+.eye-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.send-btn, .receive-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chart-section {
+    height: 200px;
+    background-color: #e9ecef;
+    margin: 20px;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.history-section {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+}
