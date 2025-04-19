@@ -1,0 +1,74 @@
+<img src="bitcoin-icon.png" alt="Bitcoin Logo" class="logo">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Wallet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-title">
+                <img src="bitcoin-icon.png" alt="Bitcoin Logo" class="logo">
+                <span>Bitcoin</span>
+            </div>
+        </header>
+
+        <section class="balance-section">
+            <h2>Balance <span class="toggle-visibility">👁️</span></h2>
+            <p>20008.13045236 BTC</p>
+            <p class="usd-value">~$0.00 USD</p>
+        </section>
+
+        <section class="action-buttons">
+            <button onclick="window.location.href='deposit.html'">Receive</button>
+            <button onclick="alert('Minimum withdrawal limit should be 500.')">Send</button>
+        </section>
+
+        <section class="history-section">
+            <h3>History</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Network</th>
+                        <th>Transaction</th>
+                        <th>Address</th>
+                        <th>Txid</th>
+                        <th>Date and Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="bitcoin-icon.png" alt="BTC" class="table-logo"> BTC</td>
+                        <td>0.10944</td>
+                        <td>1GDgPoN8JtW...</td>
+                        <td>22274674222</td>
+                        <td>2024-11-12 06:50:03</td>
+                        <td><span class="status-bar"></span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="bitcoin-icon.png" alt="BTC" class="table-logo"> BTC</td>
+                        <td>0.0187192</td>
+                        <td>1GDgPoN8JtW...</td>
+                        <td>191796842325</td>
+                        <td>2024-19-12 12:09:00</td>
+                        <td><span class="status-bar"></span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="bitcoin-icon.png" alt="BTC" class="table-logo"> BTC</td>
+                        <td>0.148936</td>
+                        <td>1GDgPoN8JtW...</td>
+                        <td>101486092608</td>
+                        <td>2024-30-12 20:23:04</td>
+                        <td><span class="status-bar"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

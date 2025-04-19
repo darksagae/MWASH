@@ -1,74 +1,87 @@
-<img src="bitcoin-icon.png" alt="Bitcoin Logo" class="logo">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitcoin Wallet</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+        .login-container a {
+            display: block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-title">
-                <img src="bitcoin-icon.png" alt="Bitcoin Logo" class="logo">
-                <span>Bitcoin</span>
-            </div>
-        </header>
-
-        <section class="balance-section">
-            <h2>Balance <span class="toggle-visibility">👁️</span></h2>
-            <p>20008.13045236 BTC</p>
-            <p class="usd-value">~$0.00 USD</p>
-        </section>
-
-        <section class="action-buttons">
-            <button onclick="window.location.href='deposit.html'">Receive</button>
-            <button onclick="alert('Minimum withdrawal limit should be 500.')">Send</button>
-        </section>
-
-        <section class="history-section">
-            <h3>History</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Network</th>
-                        <th>Transaction</th>
-                        <th>Address</th>
-                        <th>Txid</th>
-                        <th>Date and Time</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="bitcoin-icon.png" alt="BTC" class="table-logo"> BTC</td>
-                        <td>0.10944</td>
-                        <td>1GDgPoN8JtW...</td>
-                        <td>22274674222</td>
-                        <td>2024-11-12 06:50:03</td>
-                        <td><span class="status-bar"></span></td>
-                    </tr>
-                    <tr>
-                        <td><img src="bitcoin-icon.png" alt="BTC" class="table-logo"> BTC</td>
-                        <td>0.0187192</td>
-                        <td>1GDgPoN8JtW...</td>
-                        <td>191796842325</td>
-                        <td>2024-19-12 12:09:00</td>
-                        <td><span class="status-bar"></span></td>
-                    </tr>
-                    <tr>
-                        <td><img src="bitcoin-icon.png" alt="BTC" class="table-logo"> BTC</td>
-                        <td>0.148936</td>
-                        <td>1GDgPoN8JtW...</td>
-                        <td>101486092608</td>
-                        <td>2024-30-12 20:23:04</td>
-                        <td><span class="status-bar"></span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', (event) => {
+                const username = form.querySelector('input[name="username"]').value.trim();
+                const password = form.querySelector('input[name="password"]').value.trim();
+                
+                if (!username || !password) {
+                    event.preventDefault();
+                    alert('Both username and password are required.');
+                }
+            });
+        });
+    </script>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="main.html" method="get">
+            <input type="text" name="username" placeholder="Username" required>
+           
+            <input type="password" name="password" placeholder="Password" required>
+            
+            <button type="submit" formaction="main.html">Login</button>
+        </form>
+        <a href="#">Forgot Password?</a>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
