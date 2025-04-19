@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit BTC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-title">
+                <span>Deposit BTC</span>
+            </div>
+        </header>
+        <div style="display: flex; justify-content: center; align-items: center; margin: 20px 0;">
+            <img src="qrcode.png" alt="QR Code" style="width: 150px; height: 150px;">
+        </div>
+
+        <section class="deposit-section">
+            <div id="qrcode" class="qrcode"></div>
+            <div class="network-info">
+                <style>
+                    .network-info {
+                        text-align: left;
+                    }
+                </style>
+                <p>Network</p>
+                <p><strong>Bitcoin</strong></p>
+            </div>
+            <div class="address-info">
+                <style>
+                    .address-info {
+                        text-align: left;
+                    }
+                </style>
+                <p>Deposit Address</p>
+                <p><span id="deposit-address">186uGq39K6YADia5eCMcGHjEJJvFLYsDDE</span> <button onclick="copyAddress()">Copy</button></p>
+            </div>
+            <a href="#" class="more-details">More Details</a>
+        </section>
+
+        <button class="save-share-btn">Save and Share Address</button>
+    </div>
+
+    <!-- Include QRCode.js library via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+    <script src="deposit.js"></script>
+</body>
+</html>

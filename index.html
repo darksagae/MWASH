@@ -1,4 +1,4 @@
-
+<img src="bitcoin.jpeg" alt="Bitcoin Logo" class="logo">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,31 +8,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="wallet-container">
+    <div class="container">
         <header>
-            <div class="network">
-                <img src="bitcoin-icon.png" alt="Bitcoin" class="network-icon">
-                <span>Bitcoin (BTC)</span>
+            <div class="header-title">
+                <img src="bitcoin-icon.png" alt="Bitcoin Logo" class="logo">
+                <span>Bitcoin</span>
             </div>
         </header>
+
         <section class="balance-section">
-            <div class="balance">
-                <span>Balance</span>
-                <button class="eye-icon">👁️</button>
-                <p>20008.13045236 BTC</p>
-                <p>$0.00 USD</p>
-            </div>
-            <div class="actions">
-                <button class="send-btn">Send</button>
-                <button class="receive-btn">Receive</button>
-            </div>
+            <h2>Balance <span class="toggle-visibility">👁️</span></h2>
+            <p>20008.13045236 BTC</p>
+            <p class="usd-value">~$0.00 USD</p>
         </section>
-        <section class="chart-section">
-            <!-- Placeholder for chart -->
-            <div id="chart">Chart Placeholder</div>
+
+        <section class="action-buttons">
+            <button onclick="window.location.href='deposit.html'">Receive</button>
+            <button onclick="alert('Receive functionality not implemented.')">Send</button>
         </section>
+
         <section class="history-section">
-            <h2>History</h2>
+            <h3>History</h3>
             <table>
                 <thead>
                     <tr>
@@ -40,34 +36,34 @@
                         <th>Transaction</th>
                         <th>Address</th>
                         <th>Txid</th>
-                        <th>Date and time</th>
+                        <th>Date and Time</th>
                         <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="bitcoin-icon.png" alt="BTC" class="network-icon"> BTC</td>
+                        <td><img src="bitcoin-icon.png" alt="BTC" class="table-logo"> BTC</td>
                         <td>0.10944</td>
-                        <td>1GDgPoN8jW...</td>
-                        <td>222746742222</td>
+                        <td>1GDgPoN8JtW...</td>
+                        <td>22274674222</td>
                         <td>2024-11-12 06:50:03</td>
-                        <td></td>
+                        <td><span class="status-bar"></span></td>
                     </tr>
                     <tr>
-                        <td><img src="bitcoin-icon.png" alt="BTC" class="network-icon"> BTC</td>
+                        <td><img src="bitcoin-icon.png" alt="BTC" class="table-logo"> BTC</td>
                         <td>0.0187192</td>
-                        <td>1GDgPoN8jW...</td>
+                        <td>1GDgPoN8JtW...</td>
                         <td>191796842325</td>
                         <td>2024-19-12 12:09:00</td>
-                        <td></td>
+                        <td><span class="status-bar"></span></td>
                     </tr>
                     <tr>
-                        <td><img src="bitcoin-icon.png" alt="BTC" class="network-icon"> BTC</td>
+                        <td><img src="bitcoin-icon.png" alt="BTC" class="table-logo"> BTC</td>
                         <td>0.148936</td>
-                        <td>1GDgPoN8jW...</td>
+                        <td>1GDgPoN8JtW...</td>
                         <td>101486092608</td>
                         <td>2024-30-12 20:23:04</td>
-                        <td></td>
+                        <td><span class="status-bar"></span></td>
                     </tr>
                 </tbody>
             </table>
