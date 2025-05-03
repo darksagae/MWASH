@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send BTC</title>
+    <link rel="stylesheet" href="withdrawal.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="back-btn">←</button>
+            <h1>Send BTC</h1>
+            <div class="header-icons">
+            <button class="icon-btn" title="Settings">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.09a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.09a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+            </button>
+                <button class="icon-btn" title="Help">ⓘ</button>
+                <button class="icon-btn" title="Menu">☰</button>
+            </div>
+        </header>
+        <form id="withdrawal-form">
+            <div class="input-group">
+                <label>Address/Invoice <span class="info-icon" title="Info">ⓘ</span></label>
+                <div class="input-wrapper">
+                    <input type="text" id="address" placeholder="Long press to paste" required>
+                    <button type="button" class="scan-btn" title="Scan QR" onclick="simulateScan()">
+                        <svg class="qr-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="4" y="4" width="6" height="6" rx="1"/>
+                            <rect x="14" y="4" width="6" height="6" rx="1"/>
+                            <rect x="4" y="14" width="6" height="6" rx="1"/>
+                            <path d="M14 14h6v6h-6z"/>
+                            <path d="M10 10h4v4h-4z"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="paste-btn" title="Paste" onclick="pasteText()">
+                        <svg class="paste-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                            <rect x="8" y="2" width="8" height="4" rx="1"/>
+                        </svg>
+                    </button>
+                </div>
+                <span id="address-error" class="error">Please enter Recipient's Address</span>
+            </div>
+            <div class="input-group">
+                <label>Network <span class="info-icon" title="Info">ⓘ</span></label>
+                <div class="input-wrapper">
+                    <select id="network">
+                        <option value="bitcoin">Bitcoin</option>
+                    </select>
+                </div>
+            </div>
+            <p class="note">Please note that withdrawal fees have been adjusted in due of the recent increase in activities on the BTC network.</p>
+            <div class="input-group">
+                <label>Withdrawal Amount <span class="info-icon" title="Info">ⓘ</span></label>
+                <div class="input-wrapper">
+                    <input type="number" id="amount" step="0.00001" min="0.00011" placeholder="0.00" required>
+                    <span id="min-amount">Minimum 0.00011</span>
+                    <button type="button" class="max-btn" onclick="setMaxAmount()">Max</button>
+                </div>
+                <p>Available <span id="available">0 BTC</span></p>
+            </div>
+            <p class="note">*Do not withdraw directly to a crowdfund or ICO. We will not credit your account with tokens from that sale.</p>
+            <p class="note">*Do not transact with Sanctioned Entities. <a href="#" class="learn-more">Learn more</a></p>
+            <div class="input-group withdraw-container">
+                <button type="submit" id="withdraw-btn" class="withdraw-btn" disabled>Withdraw</button>
+            </div>
+            <div class="input-group summary-container">
+                <label>Receive amount</label>
+                <p><span id="receive-amount">0.00 BTC</span></p>
+                <p>Network fee 0.0004 BTC</p>
+            </div>
+        </form>
+    </div>
+    <script src="withdrawal.js"></script>
+</body>
+</html>
