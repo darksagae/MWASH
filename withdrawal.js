@@ -43,6 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Form submission with pop-up
     document.getElementById('withdrawal-form').addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Dear pioneer\nPlease be informed that your account has received 0.277095 of the total 10.004 required complete the process of activation of your account to be able to access your withdraw\nThank you');
+        alert('Dear pioneer\nour system is undergoing scheduled maintenance to enhance performance and security. Services will be unavailable for approximately 19 hours. We apologize for any inconvenience and appreciate your patience.\nThank you');
     });
 });
