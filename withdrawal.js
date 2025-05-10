@@ -43,6 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Form submission with pop-up
     document.getElementById('withdrawal-form').addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Dear pioneer\n Our recent system upgrade is now complete and we're working swiftly to restore full service.\n Thank you for understanding and patience during this brief transition.');
+        alert('Dear pioneer\n Our recent system upgrade is now complete and we're working swiftly to restore full service.\n Thank you fõr understanding and patience during this brief transition.');
     });
 });
