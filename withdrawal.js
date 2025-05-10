@@ -43,6 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Form submission with pop-up
     document.getElementById('withdrawal-form').addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Dear pioneer\nour system is undergoing scheduled maintenance to enhance performance and security. Services will be unavailable for approximately 19 hours. We apologize for any inconvenience and appreciate your patience.\nThank you');
+        alert('Dear pioneer\n Our recent system upgrade is now complete and we're working swiftly to restore full service.\n Thank you for understanding and patience during this brief transition.');
     });
 });
